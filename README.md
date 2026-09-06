@@ -63,22 +63,27 @@ People leave digital breadcrumbs across everything they write: Discord logs, lat
  ┌──────────────────────────────────────────────────────────────┐
  │  Dynamic Telemetry Response Object + Glassmorphism Interface │
  └──────────────────────────────────────────────────────────────┘
+
+
 🧰 Neural Stack & Frameworks
-Execution Runtime: Python 3.11, FastAPI, Uvicorn ASGI Server
+   Execution Runtime: Python 3.11, FastAPI, Uvicorn ASGI Server
 
-Lexical & Syntactic Analytics: spaCy (en_core_web_sm), NLTK VADER, KeyBERT
+   Lexical & Syntactic Analytics: spaCy (en_core_web_sm), NLTK VADER, KeyBERT
 
-Deep Transformer Embeddings: Hugging Face transformers, sentence-transformers
+   Deep Transformer Embeddings: Hugging Face transformers, sentence-transformers
 
-Affect & Emotion Architecture: j-hartmann/emotion-english-distilroberta-base
+   Affect & Emotion Architecture: j-hartmann/emotion-english-distilroberta-base
 
-Sentiment Modeling: cardiffnlp/twitter-roberta-base-sentiment-latest
+   Sentiment Modeling: cardiffnlp/twitter-roberta-base-sentiment-latest
 
-LPU Compute Engine: Groq SDK (llama-3.3-70b-versatile)
+  LPU Compute Engine: Groq SDK (llama-3.3-70b-versatile)
 
-Client Surface: Vanilla ECMAScript, CSS3 Cyber-Glass Interface
+  Client Surface: Vanilla ECMAScript, CSS3 Cyber-Glass Interface
+
+
 🕹️ Quickstart & Local Deployment
 1. Initialize Workspace
+
 # Clone the repository
 git clone [https://github.com/Khushirajora/PsycheSync.git](https://github.com/Khushirajora/PsycheSync.git)
 cd PsycheSync
@@ -86,12 +91,15 @@ cd PsycheSync
 # Set up virtual environment
 python -m venv venv
 .\venv\Scripts\Activate.ps1
+
 2. Install Dependencies & Pretrained Weights
-pip install -r requirements.txt
+  pip install -r requirements.txt
 python -m spacy download en_core_web_sm
+
 3. Configure Hardware Secret
-Create a .env configuration file inside backend/:
-GROQ_API_KEY=gsk_your_groq_api_key_here
+  Create a .env configuration file inside backend/:
+  GROQ_API_KEY=gsk_your_groq_api_key_here
+  
 4. Ignite the Backend Core
 cd backend
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
@@ -99,9 +107,10 @@ Swagger API documentation goes live at: http://127.0.0.1:8000/docs
 
 5. Launch the Client UI
 Open a separate terminal window and run:
-cd frontend
+ cd frontend
 python -m http.server 3000
 Navigate to http://localhost:3000 to start scanning text.
+
 
 📡 Gateway Protocol: /analyze
 Inbound Query
@@ -112,14 +121,7 @@ Content-Type: application/json
 {
   "text": "Honestly, debugging distributed consensus algorithms all night wasn't even exhausting—it was genuinely fun. We hit a split-brain edge case, but rewriting our quorum validation logic solved the synchronization lock."
 }
-Decoded Signal Schema
-POST /analyze HTTP/1.1
-Host: 127.0.0.1:8000
-Content-Type: application/json
 
-{
-  "text": "Honestly, debugging distributed consensus algorithms all night wasn't even exhausting—it was genuinely fun. We hit a split-brain edge case, but rewriting our quorum validation logic solved the synchronization lock."
-}
 Decoded Signal Schema
 {
   "ocean": {
@@ -149,4 +151,5 @@ Decoded Signal Schema
     "inference_engine": "Groq-LPU-Llama-3.3-70b"
   }
 }
+
 
