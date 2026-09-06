@@ -117,6 +117,7 @@ Navigate to http://localhost:3000 to start scanning text.
 ```
 
 📡 Gateway Protocol: /analyze
+```text
 Inbound Query
 POST /analyze HTTP/1.1
 Host: 127.0.0.1:8000
@@ -155,5 +156,6 @@ Decoded Signal Schema
     "inference_engine": "Groq-LPU-Llama-3.3-70b"
   }
 }
+```
 
 
