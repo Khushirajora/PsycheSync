@@ -1,199 +1,152 @@
-# PersonaLens 🔍
+# 🔮 PsycheSync // Deep Mind & Vibe Engine
+> **Drop the receipts. Decode the human.**  
+> Real-time neural psycholinguistics decoding OCEAN profiles, subconscious patterns, and social communication styles directly from unstructured text.
 
-**AI-Powered Personality Analysis from Text**
-
-PersonaLens is a collaborative NLP & LLM-based personality analysis system developed by a team of three members: Mansi Kharwar, Nishtha, and Pratibha.
-
-Paste any text — tweets, chats, essays — and get a deep personality profile powered by a 3-layer NLP pipeline.
-
-`Python` `FastAPI` `HuggingFace` `Groq`
-
----
-
-## 🧠 What It Does
-
-PersonaLens analyzes text and outputs:
-
-- **Big Five (OCEAN)** personality traits with evidence
-- **Communication style** — analytical, expressive, driver, amiable
-- **Behavioral insights** — thinking style, decision making, stress signals
-- **Strengths & blind spots**
-- **Career fit suggestions**
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Groq LPU](https://img.shields.io/badge/Groq-LPU_Accelerated-f55036?style=for-the-badge)](https://groq.com/)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ---
 
-## ⚙️ Architecture — 3-Layer NLP Pipeline
+## ⚡ The Rundown
 
-```
-Raw Text Input
-     │
-     ▼
-Layer 1 — Classical NLP (fast, free)
-  ├── VADER Sentiment Analysis
-  ├── RoBERTa Sentiment (cardiffnlp)
-  ├── KeyBERT Keyword Extraction
-  └── spaCy Linguistic Features
-     │
-     ▼
-Layer 2 — Deep NLP (HuggingFace)
-  ├── Emotion Detection (j-hartmann/emotion-english)
-  └── Sentence Embeddings (all-MiniLM-L6-v2)
-     │
-     ▼
-Layer 3 — LLM Reasoning (Groq)
-  └── Llama 3.3 70B → OCEAN Profile + Insights
-     │
-     ▼
-Structured JSON Response → Beautiful Frontend UI
-```
+People leave digital breadcrumbs across everything they write: Discord logs, late-night tweets, cover letters, and messy commit messages. 
+
+**PsycheSync** acts as an autonomous psychological decoder. Instead of relying purely on superficial sentiment tools, PsycheSync channels raw syntax into a hierarchical 3-stage neural pipeline: extracting lexical stats, running latent emotion transformers, and prompting an ultra-low-latency Llama-3.3-70B model to map behavioral profiles with receipts.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧬 Diagnostic Output Matrix
 
-| Layer        | Technology |
-|--------------|------------|
-| Backend      | FastAPI + Python |
-| Sentiment    | VADER + cardiffnlp/twitter-roberta |
-| Keywords     | KeyBERT |
-| Linguistic   | spaCy |
-| Emotions     | j-hartmann/emotion-english-distilroberta |
-| Embeddings   | sentence-transformers/all-MiniLM-L6-v2 |
-| LLM          | Groq API (Llama 3.3 70B) |
-| Frontend     | HTML + CSS + Vanilla JS |
+| Module | Signal Vector | Extracted Psychological Artifacts |
+| :--- | :--- | :--- |
+| **🌊 OCEAN Vector** | Big Five Trait Scoring | Scale 1–10 quantitative calibration + contextual quote citations |
+| **🗣️ Social Frequency** | Interaction Style | Primary/Secondary drivers (Analytical, Catalyst, Stabilizer, Driver) |
+| **🧠 Latent Cognition** | Decision Dynamics | Logic flow, instinctive problem-solving biases, and cognitive strain |
+| **🎯 Trait Trajectory** | Strengths & Vulnerabilities | Operational blind spots, collaborative leverage, and strategic career paths |
+| **🔬 Raw Sub-Signals** | Linguistic Markers | VADER polarity, transformer emotion distribution, and KeyBERT semantic hubs |
 
 ---
 
-## 🚀 Getting Started
+## 🛰️ 3-Stage Cascading Intelligence Pipeline
 
-### 1. Clone / unzip the project
+```text
+ ┌──────────────────────────────────────────────────────────────┐
+ │                      RAW INCOMING TEXT                       │
+ └──────────────────────────────┬───────────────────────────────┘
+                                │
+                                ▼
+ ┌──────────────────────────────────────────────────────────────┐
+ │ STAGE 01: Classical Surface & Morphological Extraction       │
+ │  ├── Rule-based Valence Breakdown (VADER)                    │
+ │  ├── Contextual Lexical Polarity (Twitter-RoBERTa)           │
+ │  ├── Semantic Kernel & Keyword Anchors (KeyBERT)             │
+ │  └── Dependency Graphing & Syntactic Attributes (spaCy)      │
+ └──────────────────────────────┬───────────────────────────────┘
+                                │
+                                ▼
+ ┌──────────────────────────────────────────────────────────────┐
+ │ STAGE 02: Latent Affect & Semantic Dense Projections         │
+ │  ├── 7-Class Emotion Tensor (DistilRoBERTa Emotion Engine)   │
+ │  └── 384-Dim Vector Embeddings (all-MiniLM-L6-v2)            │
+ └──────────────────────────────┬───────────────────────────────┘
+                                │
+                                ▼
+ ┌──────────────────────────────────────────────────────────────┐
+ │ STAGE 03: Inferential Deduction (Groq Hardware Engine)       │
+ │  └── Meta-Llama 3.3 70B (Versatile) Synthesis                │
+ └──────────────────────────────┬───────────────────────────────┘
+                                │
+                                ▼
+ ┌──────────────────────────────────────────────────────────────┐
+ │  Dynamic Telemetry Response Object + Glassmorphism Interface │
+ └──────────────────────────────────────────────────────────────┘
+🧰 Neural Stack & Frameworks
+Execution Runtime: Python 3.11, FastAPI, Uvicorn ASGI Server
 
-```bash
-cd personalens
-```
+Lexical & Syntactic Analytics: spaCy (en_core_web_sm), NLTK VADER, KeyBERT
 
-### 2. Create a virtual environment
+Deep Transformer Embeddings: Hugging Face transformers, sentence-transformers
 
-```bash
+Affect & Emotion Architecture: j-hartmann/emotion-english-distilroberta-base
+
+Sentiment Modeling: cardiffnlp/twitter-roberta-base-sentiment-latest
+
+LPU Compute Engine: Groq SDK (llama-3.3-70b-versatile)
+
+Client Surface: Vanilla ECMAScript, CSS3 Cyber-Glass Interface
+🕹️ Quickstart & Local Deployment
+1. Initialize Workspace
+# Clone the repository
+git clone [https://github.com/Khushirajora/PsycheSync.git](https://github.com/Khushirajora/PsycheSync.git)
+cd PsycheSync
+
+# Set up virtual environment
 python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# Mac/Linux
-source venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
+.\venv\Scripts\Activate.ps1
+2. Install Dependencies & Pretrained Weights
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-```
-
-> The first run will also download several HuggingFace models
-> (~1–2 GB total). This happens automatically on first request.
-
-### 4. Set up environment variables
-
-Copy `.env.example` to `.env` inside the `backend/` folder (or project root)
-and add your free Groq API key (get one at https://console.groq.com):
-
-```bash
-cp .env.example backend/.env
-```
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-```
-
-### 5. Run the backend
-
-```bash
+3. Configure Hardware Secret
+Create a .env configuration file inside backend/:
+GROQ_API_KEY=gsk_your_groq_api_key_here
+4. Ignite the Backend Core
 cd backend
-uvicorn main:app --reload
-```
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+Swagger API documentation goes live at: http://127.0.0.1:8000/docs
 
-The API will be available at `http://localhost:8000`
-(interactive docs at `http://localhost:8000/docs`).
+5. Launch the Client UI
+Open a separate terminal window and run:
+cd frontend
+python -m http.server 3000
+Navigate to http://localhost:3000 to start scanning text.
 
-### 6. Open the frontend
+📡 Gateway Protocol: /analyze
+Inbound Query
+POST /analyze HTTP/1.1
+Host: 127.0.0.1:8000
+Content-Type: application/json
 
-Open `frontend/index.html` directly in your browser
-(or serve it with `python -m http.server` from the `frontend/` folder).
+{
+  "text": "Honestly, debugging distributed consensus algorithms all night wasn't even exhausting—it was genuinely fun. We hit a split-brain edge case, but rewriting our quorum validation logic solved the synchronization lock."
+}
+Decoded Signal Schema
+POST /analyze HTTP/1.1
+Host: 127.0.0.1:8000
+Content-Type: application/json
 
----
-
-## 📊 API
-
-### `POST /analyze`
-
-**Request body:**
-
-```json
-{ "text": "Your text here, at least a few sentences..." }
-```
-
-**Response (abridged):**
-
-```json
+{
+  "text": "Honestly, debugging distributed consensus algorithms all night wasn't even exhausting—it was genuinely fun. We hit a split-brain edge case, but rewriting our quorum validation logic solved the synchronization lock."
+}
+Decoded Signal Schema
 {
   "ocean": {
-    "openness": {"score": 8, "label": "High", "evidence": "..."},
-    "conscientiousness": {"score": 7, "label": "Above Average", "evidence": "..."},
-    "extraversion": {"score": 2, "label": "Low", "evidence": "..."},
-    "agreeableness": {"score": 5, "label": "Average", "evidence": "..."},
-    "neuroticism": {"score": 1, "label": "Low", "evidence": "..."}
+    "openness": { "score": 9, "label": "High", "evidence": "Enthusiastic engagement with abstract, complex distributed logic." },
+    "conscientiousness": { "score": 8, "label": "High", "evidence": "Methodical decomposition of edge-case concurrency issues." },
+    "extraversion": { "score": 3, "label": "Low", "evidence": "Introspective problem-solving orientation." },
+    "agreeableness": { "score": 6, "label": "Average", "evidence": "Collaborative 'we' framing without defensive ego." },
+    "neuroticism": { "score": 2, "label": "Low", "evidence": "High stress tolerance during system failure scenarios." }
   },
   "communication_style": {
     "primary_style": "analytical",
     "secondary_style": "driver",
-    "tone": "reserved",
-    "description": "..."
+    "tone": "objective",
+    "description": "Systematic communication that relies on empirical evidence and structured logic."
   },
   "behavioral_insights": {
-    "thinking_style": "...",
-    "decision_making": "...",
-    "stress_signals": "..."
+    "thinking_style": "First-principles engineering logic",
+    "decision_making": "Empirical and telemetry-driven",
+    "stress_signals": "Hyperfocus on system architecture under pressure"
   },
-  "strengths": ["problem-solving", "technical expertise", "self-motivation"],
-  "blind_spots": ["..."],
-  "career_fit": ["software engineer", "data analyst", "researcher"],
-  "summary": "...",
-  "nlp_signals": { "...": "raw Layer 1 & 2 outputs" },
-  "meta": { "word_count": 142, "timing_seconds": { "...": "..." } }
+  "strengths": ["Deep systems thinking", "High autonomy", "Root-cause isolation"],
+  "blind_spots": ["May prioritize architectural purity over rapid shipment"],
+  "career_fit": ["Distributed Systems Architect", "Security Engineer", "Quantitative Developer"],
+  "summary": "High-cognitive autonomy archetype with robust emotional resilience and an analytical communication style.",
+  "meta": {
+    "word_count": 32,
+    "inference_engine": "Groq-LPU-Llama-3.3-70b"
+  }
 }
-```
 
-### `GET /health`
-
-Simple health check.
-
----
-
-## 📁 Project Structure
-
-```
-personalens/
-├── backend/
-│   ├── main.py              # FastAPI app & /analyze endpoint
-│   ├── layer1_classical.py  # VADER, RoBERTa, KeyBERT, spaCy
-│   ├── layer2_deep.py       # Emotion detection, embeddings
-│   └── layer3_llm.py        # Groq Llama 3.3 70B reasoning
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── requirements.txt
-└── .env.example
-```
-
----
-
-## ⚠️ Notes
-
-- The first analysis request will be slow as HuggingFace models download
-  and load into memory. Subsequent requests are much faster.
-- Minimum input: ~5 words. For reliable OCEAN scores, aim for at least
-  a few sentences (50+ words).
-- All model loading is lazy and cached as module-level singletons.
