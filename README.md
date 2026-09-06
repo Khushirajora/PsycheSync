@@ -63,9 +63,12 @@ People leave digital breadcrumbs across everything they write: Discord logs, lat
  ┌──────────────────────────────────────────────────────────────┐
  │  Dynamic Telemetry Response Object + Glassmorphism Interface │
  └──────────────────────────────────────────────────────────────┘
+```
+---
 
+## 🧰 Neural Stack & Frameworks
 
-🧰 Neural Stack & Frameworks
+```text
    Execution Runtime: Python 3.11, FastAPI, Uvicorn ASGI Server
 
    Lexical & Syntactic Analytics: spaCy (en_core_web_sm), NLTK VADER, KeyBERT
@@ -79,9 +82,10 @@ People leave digital breadcrumbs across everything they write: Discord logs, lat
   LPU Compute Engine: Groq SDK (llama-3.3-70b-versatile)
 
   Client Surface: Vanilla ECMAScript, CSS3 Cyber-Glass Interface
-
+```
 
 🕹️ Quickstart & Local Deployment
+```text
 1. Initialize Workspace
 
 # Clone the repository
@@ -110,7 +114,7 @@ Open a separate terminal window and run:
  cd frontend
 python -m http.server 3000
 Navigate to http://localhost:3000 to start scanning text.
-
+```
 
 📡 Gateway Protocol: /analyze
 Inbound Query
